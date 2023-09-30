@@ -13,5 +13,9 @@ def get_weather_from(city = "Dallas"):
 if __name__ == "__main__":
     print("\n***Welcome to the Weather App**\n")
     city = input("\nPlease Enter a City: ")
+
+    #Validate against empty strings
+    if not bool(city.strip()):
+        city = 'Kansas City'
     print("\n")
     print(get_weather_from(city))
